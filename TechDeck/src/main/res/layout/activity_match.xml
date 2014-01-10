@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pictures_layout">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:id="@+id/pic0" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:id="@+id/pic1" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:id="@+id/pic2" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:id="@+id/pic3" />
+    </LinearLayout>
+
+   <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:id="@+id/bio_layout">
+
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="100dp"
+           android:text="New Text"
+           android:layout_weight="1"
+           android:background="#aaccee"
+           android:layout_margin="5dp"
+           android:id="@+id/bio0" />
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="100dp"
+           android:text="New Text"
+           android:layout_weight="1"
+           android:background="#aaccee"
+           android:layout_margin="5dp"
+           android:id="@+id/bio1" />
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="100dp"
+           android:text="New Text"
+           android:layout_weight="1"
+           android:background="#aaccee"
+           android:layout_margin="5dp"
+           android:id="@+id/bio2" />
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="100dp"
+           android:text="New Text"
+           android:layout_weight="1"
+           android:background="#aaccee"
+           android:layout_margin="5dp"
+           android:id="@+id/bio3" />
+   </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/zoom_layout">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/zoomImageView" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/zoomBioView" />
+    </LinearLayout>
+</LinearLayout>
