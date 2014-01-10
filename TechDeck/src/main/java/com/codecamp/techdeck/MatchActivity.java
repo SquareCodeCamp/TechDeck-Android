@@ -42,8 +42,8 @@ public class MatchActivity extends Activity {
             final TextView bio = (TextView) bioGroup.getChildAt(i);
             bio.setText(deck.cards[i].bio);
 
-            final ImageView image = (ImageView) picGroup.getChildAt(i);
-            Picasso.with(this).load(deck.cards[i].url).into(image);
+            final PictureCardView pictureCard = (PictureCardView) picGroup.getChildAt(i);
+            Picasso.with(this).load(deck.cards[i].url).resizeDimen(R.dimen.card_height, R.dimen.card_width).centerCrop().into(pictureCard.getCardImage());
 
             bio.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -54,7 +54,7 @@ public class MatchActivity extends Activity {
                 }
             });
 
-            image.setOnClickListener(new View.OnClickListener() {
+            pictureCard.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Picasso.with(MatchActivity.this).load(card.url).into(zoomImage);
@@ -73,6 +73,10 @@ public class MatchActivity extends Activity {
             if (bioSelectionId == imageSelectionId)
             {
                 Toast.makeText(this, R.string.success, Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(this, R.string.failure, Toast.LENGTH_SHORT).show();
             }
         }
     }
