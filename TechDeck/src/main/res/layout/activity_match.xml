@@ -43,7 +43,7 @@
         android:focusableInTouchMode="false"
         android:id="@+id/bio_layout">
 
-       <TextView
+       <com.codecamp.techdeck.BioCardView
            android:layout_width="0dp"
            android:layout_height="100dp"
            android:text="New Text"
@@ -51,7 +51,7 @@
            android:background="#aaccee"
            android:layout_margin="5dp"
            android:id="@+id/bio0" />
-       <TextView
+       <com.codecamp.techdeck.BioCardView
            android:layout_width="0dp"
            android:layout_height="100dp"
            android:text="New Text"
@@ -59,7 +59,7 @@
            android:background="#aaccee"
            android:layout_margin="5dp"
            android:id="@+id/bio1" />
-       <TextView
+       <com.codecamp.techdeck.BioCardView
            android:layout_width="0dp"
            android:layout_height="100dp"
            android:text="New Text"
@@ -67,7 +67,7 @@
            android:background="#aaccee"
            android:layout_margin="5dp"
            android:id="@+id/bio2"/>
-       <TextView
+       <com.codecamp.techdeck.BioCardView
            android:layout_width="0dp"
            android:layout_height="100dp"
            android:text="New Text"
@@ -94,8 +94,13 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="New Text"
             android:id="@+id/zoomBioView"
             android:gravity="center" />
     </LinearLayout>
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_again"/>
 </LinearLayout>

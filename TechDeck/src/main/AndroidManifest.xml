@@ -3,6 +3,7 @@
     package="com.codecamp.techdeck" >
 
     <application
+        android:name="com.codecamp.techdeck.TechDeckApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -16,7 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.codecamp.techdeck.WinnerActivity"
+            android:label="@string/title_activity_winner" >
+        </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

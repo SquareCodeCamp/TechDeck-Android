@@ -6,14 +6,14 @@ package com.codecamp.techdeck;
 public class Card {
     int id;
     String name;
-    String url;
+    String image_url;
     String bio;
     String wiki_link;
 
     public Card(int id, String name, String url, String bio, String wiki_link) {
         this.id = id;
         this.name = name;
-        this.url = url;
+        this.image_url = url;
         this.bio = bio;
         this.wiki_link = wiki_link;
     }
