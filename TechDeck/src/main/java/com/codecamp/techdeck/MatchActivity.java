@@ -26,6 +26,8 @@ public class MatchActivity extends Activity {
     ViewGroup picGroup;
     TextView zoomBio;
     ImageView zoomImage;
+    ViewGroup portraitLayout;
+    TextView nameView;
     int bioSelectionId = -1;
     int imageSelectionId = -1;
     int numMatches;
@@ -42,6 +44,8 @@ public class MatchActivity extends Activity {
         picGroup = (ViewGroup) findViewById(R.id.pictures_layout);
         zoomBio = (TextView) findViewById(R.id.zoomBioView);
         zoomImage = (ImageView) findViewById(R.id.zoomImageView);
+        nameView = (TextView) findViewById(R.id.name);
+        portraitLayout = (ViewGroup) findViewById(R.id.portrait_layout);
         button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +124,8 @@ public class MatchActivity extends Activity {
                     bioSelectionId = card.id;
                     if (bioCard.isCardMatched()) {
                         Picasso.with(MatchActivity.this).load(card.image_url).into(zoomImage);
-                        zoomImage.setVisibility(View.VISIBLE);
+                        nameView.setText(card.name);
+                        portraitLayout.setVisibility(View.VISIBLE);
                         imageSelectionId = card.id;
                         disableSelection();
                     } else if (checkResults()) {
@@ -134,8 +139,9 @@ public class MatchActivity extends Activity {
                 @Override
                 public void onClick(View view) {
                     if (button.getVisibility() == View.VISIBLE) return;
-                    zoomImage.setVisibility(View.VISIBLE);
+                    portraitLayout.setVisibility(View.VISIBLE);
                     Picasso.with(MatchActivity.this).load(card.image_url).into(zoomImage);
+                    nameView.setText(card.name);
                     imageSelectionId = card.id;
                     if (pictureCard.isCardMatched()) {
                         zoomBio.setText(card.bio);
@@ -173,7 +179,7 @@ public class MatchActivity extends Activity {
     private void resetSelection() {
         bioSelectionId = -1;
         imageSelectionId = -1;
-        zoomImage.setVisibility(View.INVISIBLE);
+        portraitLayout.setVisibility(View.INVISIBLE);
         zoomBio.setText("");
         enableSelection();
     }
